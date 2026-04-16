@@ -1,0 +1,675 @@
+@font-face{
+    font-family: 'styl';
+    src:url(../police/RobotoSlab-ExtraBold.woff2);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: 'roboto';
+    src:url(../police/Boldonse-Regular.woff);
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* --- RÉINITIALISATION DE BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- SECTION PRINCIPALE (Hero) --- */
+
+/* --- EN-TÊTE ET NAVIGATION --- */
+header {
+       /* Dégradé sombre et chaud superposé à une image de fond */
+    background: linear-gradient(to bottom, rgba(255, 254, 255, 0.027), rgba(20, 20, 20, 0.082)), 
+                url('../images/cam\ \(6\).jpg') center/cover no-repeat;
+    /* Hauteur adaptée : 80% de la hauteur de l'écran (pas trop grand) */
+    min-height: 80vh; 
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+ /* Pousse le logo à gauche et le menu à droite */
+    align-items: center;
+    padding-bottom: 30px; /* Espace autour du menu */
+    width: 100%;
+}
+
+.logo {
+    font-size: 24px;
+    font-family: 'styl';
+    font-weight: bold;
+    color: aliceblue;
+     /* Police plus élégante pour le logo */
+   
+}
+
+.logo span {
+    color: #ff3b3b; /* Petit point rouge pour le style */
+}
+
+nav ul {
+    list-style: none; /* Enlève les puces de la liste */
+    display: flex;
+    gap: 30px; /* Espace entre les liens */
+}
+
+nav a {
+    color: #ffffff;
+   margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+   
+}
+nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: rgb(235, 84, 14);
+      left: 0;
+      bottom: -5px;  
+      transition: 0.3s;
+    }
+
+nav a:hover {
+    color: #e0490d; /* Devient rouge au survol */
+}
+
+ 
+     nav a:hover::after {
+      width: 100%; 
+    }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-size: 50%;
+    background-color: black;
+    height: 6rem;
+    padding-left: 4rem;
+    padding-right: 2rem;
+}
+
+
+
+header h1 {
+    font-size: 100px;
+    font-family:"roboto";
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-weight: 50rem;
+    margin-bottom: 20px;
+    top: 310px;
+    position:absolute;
+    max-width: 800%;
+   
+    
+}
+
+.red-dot {
+    color: #ee5108ef; /* Le point rouge caractéristique de ton image */
+}
+
+header p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: #f3f8f8;
+    margin-top: 18%;
+   max-width: 600px;
+   
+    
+}
+
+/* --- BOUTON --- */
+ .btn {
+      padding: 14px 30px;
+      border-radius: 30px;
+      background: gold;
+      color: black;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      left: 50%;
+      margin-top: 3%;
+    }
+
+    .btn:hover {
+      background: orange;
+      transform: translateY(-3px);
+    }
+      /* effet super */
+
+    .netflix-text {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: netflixReveal 1.8s ease forwards;
+  letter-spacing: 2px;
+  
+}
+
+@keyframes netflixReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    text-shadow: none;
+  }
+  50% {
+    opacity: 0.7;
+    text-shadow: 0 0 10px rgb(243, 242, 239); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 20px rgb(14, 13, 13);
+  }
+}
+
+
+
+/* --- SECTION EXPLORATION --- */
+.explore-section {
+    /* Couleur de fond chaleureuse rappelant la latérite de l'Ouest */
+    background-color: #c97a3e; 
+    padding: 80px 8%; /* Espace en haut/bas et sur les côtés */
+    color: #ffffff;
+    overflow: hidden; /* Empêche les éléments de déborder de la page */
+}
+
+.explore-container {
+    display: flex;
+    align-items: center;
+    gap: 120px; /* Espace entre le texte à gauche et les cartes à droite */
+}
+
+/* --- BLOC GAUCHE (Texte) --- */
+.explore-text {
+    flex: 1; /* Prend 1 part de l'espace disponible */
+    min-width: 300px; /* Largeur minimum pour ne pas trop s'écraser */
+}
+
+.explore-text h2 {
+    font-size: 48px;
+    font-family: 'Georgia', serif;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    opacity: 0.5; /* Rend la ligne un peu transparente */
+}
+
+.explore-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #f0e0d5; /* Un blanc légèrement teinté pour adoucir la lecture */
+}
+
+/* --- FLÈCHES --- */
+.arrows {
+    display: flex;
+    gap: 15px;
+}
+
+.arrow-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.arrow-btn:hover {
+    transform: scale(1.2); /* Grossit légèrement au survol */
+}
+
+/* --- BLOC DROIT (Cartes) --- */
+.explore-cards {
+    flex: 2; /* Prend 2 parts de l'espace (plus large que le texte) */
+    display: flex;
+    gap: 20px;
+    /* Permet de scroller horizontalement si on ajoute beaucoup de cartes */
+    overflow-x: auto; 
+    padding-bottom: 15px;
+    /* Cache la barre de défilement pour un look plus propre sur certains navigateurs */
+    scrollbar-width: none; 
+}
+
+/* --- DESIGN DES CARTES --- */
+.card {
+    min-width: 220px; /* Largeur fixe de la carte */
+    height: 300px; /* Hauteur fixe */
+    border-radius: 15px; /* Coins arrondis comme sur ton image */
+    overflow: hidden; /* Assure que l'image ne dépasse pas des coins arrondis */
+    position: relative; /* Très important pour positionner le texte par-dessus l'image */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Légère ombre pour donner de la profondeur */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recadre l'image proprement sans la déformer */
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Petit effet de zoom sur l'image au survol de la souris */
+}
+
+/* --- ÉTIQUETTE SUR LA CARTE --- */
+.card-label {
+    position: absolute; /* Se place par-dessus l'image */
+    bottom: 15px; /* À 15 pixels du bas */
+    left: 15px; /* À 15 pixels de la gauche */
+    background: rgba(0, 0, 0, 0.6); /* Fond noir semi-transparent */
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+/* --- SECTION PAYSAGES --- */
+.landscape-section {
+    /* Fond sombre avec un dégradé au-dessus d'une image de fond */
+    background: linear-gradient(to bottom, #0a0a0a 0%, rgba(10, 10, 10, 0.6) 50%, #0a0a0a 100%),
+                url('fond-montagne.jpg') center/cover no-repeat;
+    padding: 100px 8%;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* --- EN-TÊTE CENTRÉ --- */
+.landscape-header {
+    max-width: 700px;
+    margin: 0 auto 50px auto; /* Centre le bloc et ajoute de l'espace en bas */
+}
+
+.landscape-header h2 {
+    font-size: 42px;
+    font-family: 'Georgia', serif;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.divider-center {
+    width: 60px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 0 auto 20px auto; /* Centre la ligne */
+    opacity: 0.5;
+}
+
+.landscape-header p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #cccccc; /* Gris clair pour contraster avec le blanc du titre */
+}
+
+/* --- GALERIE MASONRY (Disposition en briques) --- */
+.masonry-gallery {
+    /* Magie du CSS : divise le conteneur en 3 colonnes */
+    column-count: 3;
+    column-gap: 20px; /* Espace entre les colonnes */
+    max-width: 1000px; /* Largeur maximale pour que ce soit élégant sur grand écran */
+    margin: 0 auto;
+}
+
+.gallery-item {
+    /* Empêche une image d'être coupée en deux entre deux colonnes */
+    break-inside: avoid;
+    margin-bottom: 20px; /* Espace en bas de chaque image */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Ombre pour faire ressortir l'image */
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block; /* Enlève un petit espace blanc invisible sous les images */
+    transition: transform 0.4s ease;
+}
+
+/* Effet au survol */
+.gallery-item:hover img {
+    transform: scale(1.05); /* L'image grossit très légèrement */
+}
+
+/* --- RESPONSIVE DESIGN (Pour téléphones et tablettes) --- */
+@media (max-width: 768px) {
+    .masonry-gallery {
+        column-count: 2; /* Passe à 2 colonnes sur tablette */
+    }
+}
+
+@media (max-width: 480px) {
+    .masonry-gallery {
+        column-count: 1; /* Passe à 1 seule colonne sur petit téléphone */
+    }
+    .landscape-header h2 {
+        font-size: 32px;
+    }
+}
+
+
+
+
+/* --- SECTION ACTUALITÉS --- */
+.news-section {
+    /* Fond très sombre pour contraster avec les images */
+    background-color: #0d0d0d;
+    padding: 80px 8%;
+    color: #ffffff;
+}
+
+.news-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+.news-header h2 {
+    font-size: 42px;
+    font-family: 'Georgia', serif;
+    margin-bottom: 15px;
+}
+
+.news-header p {
+    font-size: 15px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* --- DISPOSITION EN GRILLE (Grid) --- */
+.news-container {
+    display: grid;
+    /* Crée 2 colonnes égales. 1fr = 1 fraction de l'espace disponible */
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; /* Espace entre la gauche et la droite */
+    max-width: 1100px;
+    margin: 0 auto; /* Centre le conteneur */
+}
+
+/* --- ARTICLE PRINCIPAL (Gauche) --- */
+.featured-news {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.featured-news img {
+    width: 100%;
+    /* Hauteur fixe pour un rendu propre, s'adapte à la largeur */
+    height: 350px; 
+    object-fit: cover; /* Recadre sans déformer */
+    border-radius: 8px;
+}
+
+.featured-news h3 {
+    font-size: 26px;
+    font-family: 'Georgia', serif;
+    margin-top: 10px;
+    line-height: 1.3;
+}
+
+.featured-news p {
+    font-size: 14px;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+/* --- LISTE DES ARTICLES SECONDAIRES (Droite) --- */
+.side-news-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Répartit l'espace entre les 3 articles */
+}
+
+.side-news-item {
+    display: flex; /* Aligne l'image à gauche et le texte à droite */
+    gap: 20px;
+    align-items: center;
+}
+
+.side-news-item img {
+    width: 130px; /* Largeur fixe de la petite miniature */
+    height: 100px; /* Hauteur fixe de la petite miniature */
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0; /* Empêche l'image de s'écraser si le texte est trop long */
+}
+
+.side-news-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.news-date {
+    font-size: 12px;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.side-news-text h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.read-more {
+    font-size: 14px;
+    color: #c97a3e; /* Couleur ocre/terre rappelant la section 2 */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #ff3b3b; /* Devient rouge au survol */
+}
+
+/* --- RESPONSIVE (Pour téléphones et petites tablettes) --- */
+@media (max-width: 900px) {
+    .news-container {
+        /* Passe d'une disposition en 2 colonnes à 1 seule colonne (les articles s'empilent) */
+        grid-template-columns: 1fr; 
+    }
+    
+    .side-news-list {
+        gap: 30px; /* Ajoute un espace manuel quand ils sont empilés */
+        margin-top: 20px;
+    }
+}
+
+
+
+/* --- SECTION CONTACT --- */
+.contact-section {
+    position: relative; /* Indispensable pour placer la vague tout en haut */
+    background-color: #c97a3e; /* Couleur ocre/terre de la région de l'Ouest */
+    padding: 140px 8% 80px 8%; /* Plus d'espace en haut (140px) à cause de la vague */
+    color: #ffffff;
+    text-align: center;
+}
+
+/* --- VAGUE DE TRANSITION (SVG) --- */
+.wave-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-divider svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px; /* Hauteur de la vague */
+}
+
+.wave-divider .shape-fill {
+    fill: #0d0d0d; /* Couleur de la section précédente (Noir) pour une transition invisible */
+}
+
+/* --- TEXTES DE L'EN-TÊTE --- */
+.contact-content h2 {
+    font-size: 38px;
+    font-family: 'Georgia', serif;
+    margin-bottom: 40px;
+}
+
+/* --- FORMULAIRE EN LIGNE --- */
+.contact-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espace entre les champs et le bouton */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- DESIGN DES CHAMPS DE SAISIE --- */
+.contact-form input {
+    flex: 1; /* Les champs prennent chacun la moitié de l'espace disponible */
+    padding: 15px 20px;
+    border: none; /* Enlève la bordure par défaut moche des navigateurs */
+    border-radius: 5px; /* Coins légèrement arrondis */
+    background-color: rgba(0, 0, 0, 0.15); /* Fond noir très transparent (verre teinté) */
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Changer la couleur du texte "placeholder" (Votre nom...) */
+.contact-form input::placeholder {
+    color: #f0e0d5; 
+}
+
+/* Effet quand on clique dans le champ pour écrire */
+.contact-form input:focus {
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3); /* Légère lueur blanche */
+}
+
+/* --- DESIGN DU BOUTON --- */
+.contact-form button {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000; /* Bouton noir comme sur ton image */
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #222222; /* Devient gris foncé au survol */
+    transform: translateY(-2px); /* Remonte très légèrement */
+}
+
+/* --- RESPONSIVE DESIGN (Pour écrans de téléphones) --- */
+@media (max-width: 768px) {
+    .contact-form {
+        flex-direction: column; /* Les champs s'empilent au lieu d'être sur une ligne */
+    }
+    
+    .contact-form button {
+        width: 100%; /* Le bouton prend toute la largeur sur mobile */
+    }
+}
+/* --- PIED DE PAGE (FOOTER) --- */
+.site-footer {
+    background-color: #000000; /* Fond totalement noir */
+    padding: 60px 8% 40px 8%; /* Espacement interne */
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto; /* Centre le contenu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Espace entre le logo, les liens et le copyright */
+}
+
+/* --- LOGO DU FOOTER --- */
+.footer-logo h2 {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+/* Colorie une partie du logo en ocre pour rappeler le thème */
+.footer-logo span {
+    color: #c97a3e; 
+    font-style: italic;
+}
+
+/* --- LIENS DE NAVIGATION --- */
+.footer-links {
+    list-style: none; /* Enlève les puces par défaut de la liste */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne sur petit écran */
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links li {
+    display: flex;
+    align-items: center;
+}
+
+/* Ajoute le petit trait vertical "|" entre chaque lien, SAUF pour le dernier */
+.footer-links li:not(:last-child)::after {
+    content: "|";
+    color: #555555;
+    margin: 0 15px; /* Espace autour du trait */
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #cccccc; /* Gris clair */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #c97a3e; /* Devient ocre au survol */
+}
+
+/* --- COPYRIGHT --- */
+.footer-copyright {
+    color: #777777; /* Gris plus foncé pour ne pas trop attirer l'œil */
+    font-size: 13px;
+    margin-top: 10px;
+}

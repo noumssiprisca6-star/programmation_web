@@ -1,0 +1,243 @@
+@font-face{
+    font-family: 'roboto';
+    src:url(../police/Boldonse-Regular.woff);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'styl';
+    src:url(../police/RobotoSlab-ExtraBold.woff2);
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #111010ea);
+    color: white;
+    
+    
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav li:hover {
+    color: gold;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background:   url("../images/cam\ \(2\).jpg") center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* overlay sombre */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* texte */
+.hero-text {
+    position: relative;
+    text-align: center;
+    animation: fadeIn 2s ease;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    color: gold;
+    margin-bottom: 50px;
+}
+
+.hero-text p { 
+    margin-top: 50px;
+}
+
+/* SECTION */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 50px; /* espace entre le contenu et les bordures */
+
+    gap: 30px;
+}
+
+/* CARD */
+.card {
+    background: rgba(24, 23, 23, 0.1);
+    border-radius: 15px;
+    overflow: hidden; /*gerer le contenu qui depasse */
+    backdrop-filter: blur(10px); /*modifie visuellement l'arriere plan*/
+    transition: 0.4s;
+    overflow-y: auto;
+    height: 600px;
+    
+}
+ 
+/* animation hover */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* TEXTE */
+.card-text {
+    padding: 15px;
+}
+
+.card h3 {
+    color: gold;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgb(17, 15, 15);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2{
+  font-family: "styl";
+  color: rgba(221, 115, 16, 0.884);
+  
+}
+
+h1{
+  font-family: "roboto";
+}
+p2{
+  font-family: styl;
+}
+
+.netflix-text {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: netflixReveal 1.5s ease forwards;
+  letter-spacing: 2px;
+  
+}  
+
+@keyframes netflixReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    text-shadow: none;
+  }
+  50% {
+    opacity: 0.7;
+    text-shadow: 0 0 10px rgb(243, 242, 239);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 20px rgba(243, 238, 224, 0.856);
+  }
+}
+html {scroll-behavior: auto;}
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: gold;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: rgb(255, 115, 0);
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+
+
+
+
+
+
+
+ 
